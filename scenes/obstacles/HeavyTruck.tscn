@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://enlkhkscteng"]
+
+[ext_resource type="Script" path="res://scripts/obstacles.gd" id="1_2tpm5"]
+[ext_resource type="Texture2D" uid="uid://74qxrcchyffs" path="res://resources/textures/body/long_truck.atlastex" id="2_jxke5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7crd6"]
+size = Vector2(131, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmdvd"]
+size = Vector2(39, 54)
+
+[node name="HeavyTruck" type="StaticBody2D"]
+script = ExtResource("1_2tpm5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("2_jxke5")
+
+[node name="ShadowSprite3D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.129412)
+show_behind_parent = true
+z_as_relative = false
+texture = ExtResource("2_jxke5")
+offset = Vector2(3, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-20.5, 0)
+shape = SubResource("RectangleShape2D_7crd6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(64.5, 0)
+shape = SubResource("RectangleShape2D_nmdvd")

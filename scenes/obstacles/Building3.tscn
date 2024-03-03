@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqrasu75unxf3"]
+
+[ext_resource type="Script" path="res://scripts/obstacles.gd" id="1_k6grl"]
+[ext_resource type="Texture2D" uid="uid://d0pc1bda3gidb" path="res://resources/textures/body/building3.atlastex" id="1_l06eh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jkfg"]
+size = Vector2(512, 256)
+
+[node name="Building3" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_k6grl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2jkfg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+texture = ExtResource("1_l06eh")
+
+[node name="ShadowSprite3D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.129412)
+show_behind_parent = true
+texture = ExtResource("1_l06eh")
+offset = Vector2(3, 2)

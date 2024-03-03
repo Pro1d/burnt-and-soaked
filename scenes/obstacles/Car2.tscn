@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cii88rw0yyp14"]
+
+[ext_resource type="Script" path="res://scripts/obstacles.gd" id="1_3f1en"]
+[ext_resource type="Texture2D" uid="uid://bmwgyh86kw1j8" path="res://resources/textures/body/car2.atlastex" id="2_42u5x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7crd6"]
+size = Vector2(68, 42)
+
+[node name="Car" type="StaticBody2D"]
+script = ExtResource("1_3f1en")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("2_42u5x")
+
+[node name="ShadowSprite3D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.129412)
+show_behind_parent = true
+texture = ExtResource("2_42u5x")
+offset = Vector2(3, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_7crd6")

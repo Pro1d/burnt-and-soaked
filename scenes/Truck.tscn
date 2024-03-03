@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://7vc1up7aeg00"]
+
+[ext_resource type="Script" path="res://scripts/Truck.gd" id="1_syro1"]
+[ext_resource type="Texture2D" uid="uid://01hda4khbdak" path="res://resources/textures/flat/smoke1.atlastex" id="2_squyc"]
+[ext_resource type="Texture2D" uid="uid://dyd7lnjfl3c0g" path="res://resources/textures/flat/water_particle.atlastex" id="3_6gbog"]
+[ext_resource type="Texture2D" uid="uid://8hj6tfajy5ol" path="res://resources/textures/body/truck.atlastex" id="3_6nfis"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8100f"]
+radius = 32.0
+
+[sub_resource type="Gradient" id="Gradient_e1krs"]
+colors = PackedColorArray(0.741385, 0.741385, 0.741385, 1, 0.593134, 0.593134, 0.593134, 0)
+
+[sub_resource type="Curve" id="Curve_n53i2"]
+_data = [Vector2(0.00344828, 0.509777), 0.0, 1.62607, 0, 0, Vector2(0.486207, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.509777), -1.66737, 0.0, 0, 0]
+point_count = 3
+
+[node name="Truck" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_syro1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8100f")
+
+[node name="LowScanArea2D" type="Area2D" parent="CollisionShape2D"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/LowScanArea2D"]
+shape = SubResource("CircleShape2D_8100f")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-32, 0)
+amount = 12
+texture = ExtResource("2_squyc")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+damping_min = 95.484
+damping_max = 95.484
+angle_max = 360.0
+scale_amount_max = 1.2
+color_ramp = SubResource("Gradient_e1krs")
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+z_index = 3
+texture = ExtResource("3_6nfis")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="BodySprite"]
+amount = 1
+lifetime = 0.3
+explosiveness = 0.53
+texture = ExtResource("3_6gbog")
+emission_shape = 2
+emission_sphere_radius = 20.0
+direction = Vector2(-1, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 250.0
+initial_velocity_max = 300.0
+damping_min = 100.0
+damping_max = 100.0
+angle_max = 360.0
+scale_amount_curve = SubResource("Curve_n53i2")
+
+[node name="ShadowSprite" type="Sprite2D" parent="BodySprite"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 0.129412)
+show_behind_parent = true
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("3_6nfis")

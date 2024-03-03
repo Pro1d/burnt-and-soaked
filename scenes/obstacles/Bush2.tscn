@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://hkwbhp87jbcl"]
+
+[ext_resource type="Texture2D" uid="uid://ddpbb0dl75wax" path="res://resources/textures/body/bush2.atlastex" id="1_viqur"]
+[ext_resource type="Script" path="res://scripts/obstacles.gd" id="1_ydb6w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bobjo"]
+size = Vector2(39.9998, 52)
+
+[node name="Bush2" type="StaticBody2D"]
+script = ExtResource("1_ydb6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9.53674e-07, -4.76831e-07)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_bobjo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("1_viqur")
+
+[node name="ShadowSprite3D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.129412)
+show_behind_parent = true
+texture = ExtResource("1_viqur")
+offset = Vector2(3, 2)

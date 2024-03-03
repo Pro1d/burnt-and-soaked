@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://7vc1up7aeg00"]
+
+[ext_resource type="Script" path="res://scripts/Truck.gd" id="1_syro1"]
+[ext_resource type="Texture2D" uid="uid://beckwmnpwrit7" path="res://assets/textures/all.png" id="2_770qp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8100f"]
+radius = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5b1g"]
+atlas = ExtResource("2_770qp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="Gradient" id="Gradient_e1krs"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[node name="Truck" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_syro1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8100f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_x5b1g")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 12
+emission_shape = 1
+emission_sphere_radius = 5.0
+gravity = Vector2(0, 0)
+scale_amount_min = 8.0
+scale_amount_max = 12.0
+color_ramp = SubResource("Gradient_e1krs")

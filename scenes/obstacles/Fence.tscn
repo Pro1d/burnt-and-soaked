@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0s001f32qdpo"]
+
+[ext_resource type="Script" path="res://scripts/obstacles.gd" id="1_dcmhh"]
+[ext_resource type="Texture2D" uid="uid://742nka2of72y" path="res://resources/textures/body/fence.atlastex" id="1_js2fe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nw1v1"]
+size = Vector2(42, 56)
+
+[node name="Fence" type="StaticBody2D"]
+script = ExtResource("1_dcmhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nw1v1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("1_js2fe")
+
+[node name="ShadowSprite3D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.129412)
+show_behind_parent = true
+texture = ExtResource("1_js2fe")
+offset = Vector2(3, 2)

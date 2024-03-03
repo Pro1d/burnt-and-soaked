@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp083qfi5017p"]
+
+[ext_resource type="Texture2D" uid="uid://c5v8mw2bpq218" path="res://resources/textures/body/wall1.atlastex" id="1_74g8c"]
+[ext_resource type="Script" path="res://scripts/obstacles.gd" id="1_lt5bd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yig7l"]
+size = Vector2(34, 14)
+
+[node name="Wall" type="StaticBody2D"]
+script = ExtResource("1_lt5bd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yig7l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("1_74g8c")
+
+[node name="ShadowSprite3D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.129412)
+show_behind_parent = true
+texture = ExtResource("1_74g8c")
+offset = Vector2(3, 2)
