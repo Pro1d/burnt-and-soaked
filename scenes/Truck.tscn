@@ -130,3 +130,7 @@ z_index = 20
 z_as_relative = false
 texture = ExtResource("7_08bwq")
 offset = Vector2(86, 0)
+
+[node name="CollisionTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5

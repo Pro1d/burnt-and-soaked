@@ -1,6 +1,9 @@
+class_name MainMenu
 extends Control
 
+signal play_pressed()
+signal leaderboard_pressed()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	(%StartButton as Button).pressed.connect(SceneManager.go_to_game)
+	(%StartButton as Button).pressed.connect(func(): play_pressed.emit())
+	(%RankingButton as Button).pressed.connect(func(): leaderboard_pressed.emit())

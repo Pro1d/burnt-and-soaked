@@ -9,7 +9,9 @@ var get_time_func : Callable
 @onready var _centi2_label := $Centi2Label as Label
 
 func _ready() -> void:
-	var minimum_size := Vector2i(_minutes_label.size.x, 0)
+	var minimum_size := Vector2i(
+		maxi(maxi(maxi(maxi(
+			_minutes_label.size.x, _second1_label.size.x), _second2_label.size.x), _centi1_label.size.x), _centi2_label.size.x), 0)
 	_minutes_label.custom_minimum_size = minimum_size
 	_second1_label.custom_minimum_size = minimum_size
 	_second2_label.custom_minimum_size = minimum_size
@@ -33,3 +35,8 @@ func set_time(time: float) -> void:
 	_centi1_label.text = str(int(centi / 10))
 	_centi2_label.text = str(int(centi) % 10)
 	
+static func time_to_string(time: float) -> String:
+	var minutes := int(time / 60)
+	var sec := int(time) % 60
+	var centi := roundi(time * 100) % 100
+	return str(minutes) + ":" + str(sec) + "." + str(centi)

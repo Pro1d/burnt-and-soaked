@@ -63,7 +63,15 @@ func start_loading(pose: Transform2D, target_node: Node2D) -> void:
 
 func start_driving() -> void:
 	_state = State.DRIVING
+	(%CollisionTimer as Timer).stop()
 	_update_water_supply_visual()
+
+func try_take_damage() -> bool:
+	var t := (%CollisionTimer as Timer)
+	var allowed := t.is_stopped()
+	if allowed:
+		t.start()
+	return allowed
 
 func emergency_stop() -> void:
 	_state = State.EMERGENCY_STOP

@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc6frce6kkj84"]
+
+[ext_resource type="Theme" uid="uid://e2qgxo4dwns7" path="res://resources/themes/hud.theme" id="1_sggg6"]
+[ext_resource type="Script" path="res://scripts/ui/score_screen.gd" id="2_3ur2l"]
+
+[node name="ScoreScreen" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -0.000183105
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme = ExtResource("1_sggg6")
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+script = ExtResource("2_3ur2l")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ScorePanelContainer" type="PanelContainer" parent="VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/ScorePanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/ScorePanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer2/ScorePanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Your score: 0"
+
+[node name="SubmitContainer" type="HBoxContainer" parent="VBoxContainer2/ScorePanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="NameLineEdit" type="LineEdit" parent="VBoxContainer2/ScorePanelContainer/MarginContainer/VBoxContainer/SubmitContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+placeholder_text = "Name"
+max_length = 12
+editable = false
+
+[node name="SubmitButton" type="Button" parent="VBoxContainer2/ScorePanelContainer/MarginContainer/VBoxContainer/SubmitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Submit"
+
+[node name="LeaderboardPanelContainer" type="PanelContainer" parent="VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="LeaderboardScrollContainer" type="ScrollContainer" parent="VBoxContainer2/LeaderboardPanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/LeaderboardPanelContainer/LeaderboardScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="LeaderboardGridContainer" type="GridContainer" parent="VBoxContainer2/LeaderboardPanelContainer/LeaderboardScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="TemplateNameLabel" type="Label" parent="VBoxContainer2/LeaderboardPanelContainer/LeaderboardScrollContainer/MarginContainer/LeaderboardGridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "PlayerName"
+
+[node name="TemplateScoreLabel" type="Label" parent="VBoxContainer2/LeaderboardPanelContainer/LeaderboardScrollContainer/MarginContainer/LeaderboardGridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "450"
+
+[node name="BackButton" type="Button" parent="VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back To Menu"

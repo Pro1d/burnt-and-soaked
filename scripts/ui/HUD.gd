@@ -1,6 +1,9 @@
 class_name HUD
 extends Control
 
+signal menu_pressed()
+signal restart_pressed()
+
 @onready var time_display := %TimeDisplay as TimeDisplay
 @onready var water_supply := %TextureProgressBar as TextureProgressBar
 var effective_water_supply := 0
@@ -11,6 +14,8 @@ func _ready() -> void:
 	#(%MusicButton as Button).pressed.connect
 	time_display.get_time_func = (func() -> float: return Config.timer)
 	water_supply.pivot_offset = water_supply.size / 2
+	(%MenuButton as Button).pressed.connect(func(): menu_pressed.emit())
+	(%RetryButton as Button).pressed.connect(func(): restart_pressed.emit())
 
 func set_water_supply(w: int, animate: bool = true) -> void:
 	effective_water_supply = w
@@ -27,3 +32,6 @@ func set_water_supply(w: int, animate: bool = true) -> void:
 	tween.parallel().tween_property(water_supply, "value", effective_water_supply, 1.0) \
 		.from_current().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	water_supply_tween = tween
+
+func set_level(level: int, max_level: int) -> void:
+	(%LevelLabel as Label).text = "Level %s/%s" % [level, max_level]

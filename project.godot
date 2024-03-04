@@ -25,6 +25,7 @@ Config="*res://scripts/singleton/Config.gd"
 MusicManager="*res://scripts/singleton/MusicManager.gd"
 SceneManager="*res://scripts/singleton/SceneManager.gd"
 SilentWolf="*res://addons/silent_wolf/SilentWolf.gd"
+Leaderboard="*res://scripts/singleton/Leaderboard.gd"
 
 [debug]
 

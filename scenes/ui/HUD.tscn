@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bdlndkgggxiop"]
+[gd_scene load_steps=16 format=3 uid="uid://bdlndkgggxiop"]
 
 [ext_resource type="Theme" uid="uid://e2qgxo4dwns7" path="res://resources/themes/hud.theme" id="1_ihu78"]
 [ext_resource type="Script" path="res://scripts/ui/HUD.gd" id="2_tbg6n"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dnlvhvj5d5jd7" path="res://resources/textures/ui/progress_bar_bg.atlastex" id="6_vck1s"]
 [ext_resource type="Texture2D" uid="uid://dv87u42ccwly2" path="res://resources/textures/ui/progress_bar_fill.atlastex" id="7_ykfju"]
 [ext_resource type="PackedScene" uid="uid://dwm4s271ncu03" path="res://scenes/ui/TimeDisplay.tscn" id="8_nnvyx"]
+[ext_resource type="LabelSettings" uid="uid://cw0jk31bh5xpl" path="res://resources/themes/LabelSettingsHUD.tres" id="9_3h4mm"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_cnpcn"]
 device = -1
@@ -89,10 +90,11 @@ icon = ExtResource("5_nst6h")
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 16
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 value = 100.0
@@ -100,10 +102,26 @@ fill_mode = 3
 texture_under = ExtResource("6_vck1s")
 texture_progress = ExtResource("7_ykfju")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
 [node name="Control2" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TimeDisplay" parent="MarginContainer/HBoxContainer" instance=ExtResource("8_nnvyx")]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="TimeDisplay" parent="MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer" instance=ExtResource("8_nnvyx")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 1/9"
+label_settings = ExtResource("9_3h4mm")
