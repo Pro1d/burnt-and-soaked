@@ -27,9 +27,9 @@ func keep_until_finished(audio: Node) -> void: # AudioStreamPlayer[2D]
 
 func connect_all_buttons(node: Node) -> void:
 	if node is Button:
-		connect_button(node)
+		connect_button(node as Button)
 	if node is OptionButton:
-		connect_option_button(node)
+		connect_option_button(node as OptionButton)
 	for c in node.get_children():
 		connect_all_buttons(c)
 

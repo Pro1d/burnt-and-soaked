@@ -1,3 +1,4 @@
+class_name TimeDisplay
 extends HBoxContainer
 
 var get_time_func : Callable

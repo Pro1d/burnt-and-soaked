@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwm27ravitm4h"]
+
+[ext_resource type="Texture2D" uid="uid://b5ntss8q3koxw" path="res://resources/textures/flat/smoke3.atlastex" id="1_7d26h"]
+[ext_resource type="Script" path="res://scripts/fx/Fire.gd" id="1_hf7y1"]
+[ext_resource type="Texture2D" uid="uid://dxwlh6dgh5psj" path="res://resources/textures/flat/smoke2.atlastex" id="2_txfs0"]
+
+[sub_resource type="Curve" id="Curve_k4y7v"]
+_data = [Vector2(0, 0.509777), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.04083, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_622yg"]
+offsets = PackedFloat32Array(0, 0.30916, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.720467, 0.720468, 0.720467, 1, 0.691357, 0.691357, 0.691357, 0)
+
+[sub_resource type="Curve" id="Curve_ckdrs"]
+_data = [Vector2(0, 0.763967), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.428575, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_42gft"]
+offsets = PackedFloat32Array(0, 0.656489, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.958015, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_exbs6"]
+colors = PackedColorArray(0.984314, 1, 0, 1, 1, 0, 0, 1)
+
+[node name="Fire" type="Node2D"]
+z_index = 11
+script = ExtResource("1_hf7y1")
+
+[node name="SmokeCPUParticles2D" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_7d26h")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 65.0
+initial_velocity_max = 65.0
+angle_max = 360.0
+scale_amount_min = 1.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_k4y7v")
+color = Color(0.239216, 0.239216, 0.239216, 1)
+color_ramp = SubResource("Gradient_622yg")
+
+[node name="FlameCPUParticles2D" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
+lifetime = 0.35
+texture = ExtResource("2_txfs0")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 140.97
+initial_velocity_max = 140.97
+damping_min = 121.0
+damping_max = 121.0
+angle_max = 360.0
+scale_amount_min = 1.5
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_ckdrs")
+color_ramp = SubResource("Gradient_42gft")
+color_initial_ramp = SubResource("Gradient_exbs6")

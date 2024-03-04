@@ -4,6 +4,8 @@ extends Node
 #const CursorIBeamIcon := preload("res://assets/images/ui/cursor_ibeam.atlastex")
 #const CursorAimIcon := preload("res://assets/images/ui/cursor_aim1.atlastex")
 
+var timer := 0.0
+
 func _enter_tree() -> void:
 #	Input.set_custom_mouse_cursor(
 #		CursorArrowIcon, Input.CURSOR_ARROW, Vector2(2, 2)

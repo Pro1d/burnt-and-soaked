@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7b75eonwvo5e"]
+
+[ext_resource type="Texture2D" uid="uid://csplmj2sxbyoe" path="res://resources/textures/flat/area.atlastex" id="1_165mf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5t5dy"]
+radius = 32.0
+height = 128.0
+
+[node name="AreaOfInterest" type="Area2D"]
+modulate = Color(0.443137, 0.74902, 0.196078, 0.780392)
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_165mf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5t5dy")

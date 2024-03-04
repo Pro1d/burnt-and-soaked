@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdk5q3up1irk0"]
+[gd_scene load_steps=5 format=3 uid="uid://bdk5q3up1irk0"]
 
 [ext_resource type="PackedScene" uid="uid://7vc1up7aeg00" path="res://scenes/Truck.tscn" id="1_wpp4s"]
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_yuy1b"]
 [ext_resource type="PackedScene" uid="uid://bl7faujbudekx" path="res://scenes/Map.tscn" id="2_gaqfn"]
+[ext_resource type="PackedScene" uid="uid://bdlndkgggxiop" path="res://scenes/ui/HUD.tscn" id="4_v8gbc"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yuy1b")
@@ -19,3 +20,8 @@ unique_name_in_owner = true
 [node name="Camera2D" type="Camera2D" parent="Root/Truck"]
 unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="CanvasLayer" instance=ExtResource("4_v8gbc")]
+unique_name_in_owner = true
