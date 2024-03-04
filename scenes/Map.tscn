@@ -89,7 +89,7 @@ shape = SubResource("WorldBoundaryShape2D_vxvto")
 modulate = Color(0.572549, 0.654902, 1, 0.627451)
 tile_set = SubResource("TileSet_y5gju")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 65537, 805306368, 65536, 131073, 0, 131072, 65537, 1610612736, 196607, 131073, 805306369, 262142, 131073, 805306369, -196608, 131073, 805306369, -65540, 131073, 805306369, -4, 131073, 0, 65532, 65537, 1, 131068, 131073, 0, 196604, 131073, 0, 262140, 131073, 0, -65536, 131073, 0, -131068, 131073, 0, -65532, 131073, 0, 4, 131073, 0, 65540, 65537, 0, 196609, 131073, 0, 262145, 131073, 0, 327681, 65537, 0, 131073, 65537, 1342177280, -131072, 65537, 1, 131076, 131073, 1, 393217, 131073, 1, 327678, 131073, 1, 262143, 131073, 1, -196604, 131073, 1610612737, 458749, 131073, 1342177280, 458748, 131073, 1342177281, 393212, 131073, 0, 327676, 65537, 0, 458750, 131073, 1342177280, 458751, 131073, 1342177280, 393216, 131073, 1342177280, 131074, 65537, 1610612736, 131075, 131073, 1342177280, -196605, 131073, 1342177281, -196607, 131073, 1, -65537, 131073, 1342177280, -65538, 131073, 1342177280, -65539, 131073, 1342177280, -131071, 131073, 1610612736, -131070, 131073, 1610612737, -65534, 131073, 0, 2, 131073, 0, 65538, 131073, 0, 327677, 131073, 1610612736, 65533, 131073, 1610612736, 65534, 131073, 1610612736, 65535, 131073, 1610612736, 327686, 131073, 1, 327685, 131073, 1342177281, 262150, 131073, 805306369, -262141, 131073, 1610612737, -262143, 131073, 805306369, -262142, 131073, 1610612736, 327682, 131073, 1342177280, 327683, 131073, 1, 262151, 131073, 1, 262147, 131073, 805306369, 262149, 131073, 1610612737, 65543, 131073, 1610612737, 65541, 131073, 1610612736, 65542, 131073, 1610612736, 131079, 131073, 0, 196615, 131073, 0, 262148, 131073, 1342177280, 458747, 131073, 0, 393211, 131073, 0, 327675, 131073, 0, 262139, 131073, 0, 196603, 131073, 0, 131067, 131073, 0, 65531, 65537, 0, -5, 131073, 0, -65541, 131073, 0, -131077, 131073, 0, -196613, 131073, 0, -262149, 131073, 0, -327685, 131073, 0, -327686, 131073, 0, -262150, 131073, 0, -196614, 131073, 0, -131078, 131073, 0, -65542, 131073, 0, -6, 131073, 0, 65530, 131073, 0, 131066, 131073, 0, 196602, 131073, 0, 262138, 131073, 0, 327674, 131073, 0, 393210, 131073, 0, 458746, 131073, 0, 524282, 131073, 0, 524283, 131073, 0, 589818, 131073, 0, 655354, 131073, 0, 589819, 131073, 0, 655355, 131073, 0, 720891, 131073, 0, 720890, 131073, 0)
+layer_0/tile_data = PackedInt32Array(0, 65537, 805306368, 65536, 131073, 0, 131072, 65537, 1610612736, 196607, 131073, 805306369, 262142, 131073, 805306369, -196608, 131073, 805306369, -65540, 131073, 805306369, -4, 131073, 0, 65532, 65537, 1, 131068, 131073, 0, 196604, 131073, 0, 262140, 131073, 0, -65536, 131073, 0, -131068, 131073, 0, -65532, 131073, 0, 4, 131073, 0, 65540, 65537, 0, 196609, 131073, 0, 262145, 131073, 0, 327681, 65537, 0, 131073, 65537, 1342177280, -131072, 65537, 1, 131076, 131073, 1, 393217, 131073, 1, 327678, 131073, 1, 262143, 131073, 1, -196604, 131073, 1610612737, 458749, 131073, 1342177280, 458748, 131073, 1342177281, 393212, 131073, 0, 327676, 131073, 0, 458750, 131073, 1342177280, 458751, 131073, 1342177280, 393216, 131073, 1342177280, 131074, 65537, 1610612736, 131075, 131073, 1342177280, -196605, 131073, 1342177281, -196607, 131073, 1, -65537, 131073, 1342177280, -65538, 131073, 1342177280, -65539, 131073, 1342177280, -131071, 131073, 1610612736, -131070, 131073, 1610612737, -65534, 131073, 0, 2, 131073, 0, 65538, 131073, 0, 65533, 131073, 1610612736, 65534, 131073, 1610612736, 65535, 131073, 1610612736, 327686, 131073, 1, 327685, 131073, 1342177281, 262150, 131073, 805306369, -262141, 131073, 1610612737, -262143, 131073, 805306369, -262142, 131073, 1610612736, 327682, 131073, 1342177280, 327683, 131073, 1, 262151, 65537, 1610612736, 262147, 131073, 805306369, 262149, 131073, 1610612737, 65543, 65537, 1342177280, 65541, 131073, 1610612736, 65542, 131073, 1610612736, 131079, 131073, 0, 196615, 131073, 0, 262148, 131073, 1342177280, 458747, 131073, 0, 393211, 131073, 0, 327675, 131073, 0, 262139, 131073, 0, 196603, 131073, 0, 131067, 131073, 0, 65531, 65537, 0, -5, 131073, 0, -65541, 131073, 0, -131077, 131073, 0, -196613, 131073, 0, -262149, 131073, 0, -327685, 131073, 0, -327686, 131073, 0, -262150, 131073, 0, -196614, 131073, 0, -131078, 131073, 0, -65542, 131073, 0, -6, 131073, 0, 65530, 131073, 0, 131066, 131073, 0, 196602, 131073, 0, 262138, 131073, 0, 327674, 131073, 0, 393210, 131073, 0, 458746, 131073, 0, 524282, 131073, 0, 524283, 131073, 0, 589818, 131073, 0, 655354, 131073, 0, 589819, 131073, 0, 655355, 131073, 0, 720891, 131073, 0, 720890, 131073, 0, 327677, 65537, 0)
 
 [node name="Sewers" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0.639216)
@@ -130,6 +130,10 @@ texture = ExtResource("6_j305p")
 position = Vector2(-64, 1600)
 texture = ExtResource("6_j305p")
 
+[node name="Sewer11" type="Sprite2D" parent="Sewers"]
+position = Vector2(1104, 320)
+texture = ExtResource("6_j305p")
+
 [node name="Sewer4" type="Sprite2D" parent="Sewers"]
 position = Vector2(896, 852)
 texture = ExtResource("6_j305p")
@@ -154,17 +158,9 @@ rotation = -1.5708
 [node name="Wall5" parent="TrafficLights" instance=ExtResource("7_busql")]
 position = Vector2(-768, 32)
 
-[node name="Wall6" parent="TrafficLights" instance=ExtResource("7_busql")]
-position = Vector2(-1056, 256)
-rotation = 1.5561
-
 [node name="Wall7" parent="TrafficLights" instance=ExtResource("7_busql")]
 position = Vector2(-800, 256)
 rotation = 1.5708
-
-[node name="Wall8" parent="TrafficLights" instance=ExtResource("7_busql")]
-position = Vector2(-992, 0)
-rotation = -1.5708
 
 [node name="Bushes" type="Node2D" parent="."]
 
@@ -176,7 +172,7 @@ position = Vector2(-272, 1952)
 rotation = 1.309
 
 [node name="Bush4" parent="Bushes" instance=ExtResource("13_nkg4k")]
-position = Vector2(112, 1232)
+position = Vector2(144, 1232)
 
 [node name="Bush37" parent="Bushes" instance=ExtResource("13_nkg4k")]
 position = Vector2(-272, 2016)
@@ -185,11 +181,16 @@ position = Vector2(-272, 2016)
 position = Vector2(192, 1120)
 
 [node name="Bush11" parent="Bushes" instance=ExtResource("12_x30v3")]
-position = Vector2(-480, -640)
-rotation = -1.5975
+position = Vector2(-272, -544)
+rotation = -1.83259
+
+[node name="Bush41" parent="Bushes" instance=ExtResource("12_x30v3")]
+position = Vector2(-48, -800)
+rotation = -3.14159
 
 [node name="Bush5" parent="Bushes" instance=ExtResource("12_x30v3")]
-position = Vector2(-464, 544)
+position = Vector2(-288, 432)
+rotation = -1.57079
 
 [node name="Bush1" parent="Bushes" instance=ExtResource("14_io8m8")]
 position = Vector2(-1024, 800)
@@ -197,7 +198,7 @@ rotation = -1.5708
 
 [node name="Bush8" parent="Bushes" instance=ExtResource("14_io8m8")]
 position = Vector2(-1024, 1120)
-rotation = -1.5708
+rotation = -4.71238
 
 [node name="Bush9" parent="Bushes" instance=ExtResource("14_io8m8")]
 position = Vector2(-1024, 1440)
@@ -205,10 +206,14 @@ rotation = -1.5708
 
 [node name="Bush10" parent="Bushes" instance=ExtResource("14_io8m8")]
 position = Vector2(-1024, 1760)
-rotation = -1.5708
+rotation = -4.71238
 
 [node name="Bush6" parent="Bushes" instance=ExtResource("14_io8m8")]
 position = Vector2(-1024, 480)
+rotation = -1.5708
+
+[node name="Bush42" parent="Bushes" instance=ExtResource("14_io8m8")]
+position = Vector2(-1024, -224)
 rotation = -1.5708
 
 [node name="Bush7" parent="Bushes" instance=ExtResource("13_nkg4k")]
@@ -220,8 +225,12 @@ position = Vector2(1856, 1376)
 rotation = -2.61799
 
 [node name="Bush33" parent="Bushes" instance=ExtResource("13_nkg4k")]
-position = Vector2(-48, -800)
-rotation = -3.19273
+position = Vector2(-240, -784)
+rotation = -3.66519
+
+[node name="Bush39" parent="Bushes" instance=ExtResource("13_nkg4k")]
+position = Vector2(-192, -800)
+rotation = -3.14159
 
 [node name="Bush16" parent="Bushes" instance=ExtResource("13_nkg4k")]
 position = Vector2(2032, 1424)
@@ -291,12 +300,16 @@ rotation = 4.71239
 position = Vector2(2016, 1712)
 
 [node name="Bush34" parent="Bushes" instance=ExtResource("14_io8m8")]
-position = Vector2(-487, -720)
-rotation = -1.75123
+position = Vector2(-288, -624)
+rotation = -1.57079
 
 [node name="Bush35" parent="Bushes" instance=ExtResource("14_io8m8")]
-position = Vector2(-488, -560)
+position = Vector2(-272, -720)
 rotation = -1.38019
+
+[node name="Bush40" parent="Bushes" instance=ExtResource("14_io8m8")]
+position = Vector2(-128, -800)
+rotation = -3.14159
 
 [node name="Bush19" parent="Bushes" instance=ExtResource("14_io8m8")]
 position = Vector2(1088, 2016)
@@ -334,10 +347,6 @@ rotation = 1.5708
 position = Vector2(1056, 1840)
 rotation = 1.5708
 
-[node name="Wall10" parent="Walls" instance=ExtResource("8_qkqsk")]
-position = Vector2(2048, 1184)
-rotation = 1.5708
-
 [node name="Wall3" parent="Walls" instance=ExtResource("10_nxppy")]
 position = Vector2(1856, 1280)
 
@@ -356,15 +365,15 @@ position = Vector2(1792, 1472)
 rotation = -1.5708
 
 [node name="Wall5" parent="Walls" instance=ExtResource("10_nxppy")]
-position = Vector2(512, 1072)
+position = Vector2(768, 1072)
 rotation = -1.5708
 
 [node name="Wall7" parent="Walls" instance=ExtResource("10_nxppy")]
-position = Vector2(512, 1152)
+position = Vector2(768, 1152)
 rotation = -1.5708
 
 [node name="Wall8" parent="Walls" instance=ExtResource("10_nxppy")]
-position = Vector2(512, 1232)
+position = Vector2(768, 1232)
 rotation = -1.5708
 
 [node name="Wall6" parent="Walls" instance=ExtResource("10_nxppy")]
@@ -414,41 +423,6 @@ rotation = -1.5708
 [node name="WallAlt21" parent="Walls" instance=ExtResource("11_4p0kd")]
 position = Vector2(480, 32)
 rotation = -1.5708
-
-[node name="WallAlt22" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -32)
-rotation = -1.5708
-
-[node name="WallAlt23" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -128)
-rotation = -1.5708
-
-[node name="WallAlt24" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -224)
-rotation = -1.5708
-
-[node name="WallAlt25" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -320)
-rotation = -1.5708
-
-[node name="WallAlt26" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -416)
-rotation = -1.5708
-
-[node name="WallAlt27" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -512)
-rotation = -1.5708
-
-[node name="WallAlt28" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -608)
-rotation = -1.5708
-
-[node name="WallAlt29" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-1024, -704)
-rotation = -1.5708
-
-[node name="WallAlt30" parent="Walls" instance=ExtResource("11_4p0kd")]
-position = Vector2(-992, -768)
 
 [node name="WallAlt16" parent="Walls" instance=ExtResource("11_4p0kd")]
 position = Vector2(272, 0)
@@ -522,13 +496,25 @@ position = Vector2(1392, -768)
 rotation = -1.5708
 
 [node name="Wall11" parent="Walls" instance=ExtResource("10_nxppy")]
-position = Vector2(-448, 1408)
+position = Vector2(-464, 1344)
 
 [node name="Wall12" parent="Walls" instance=ExtResource("9_q0n2c")]
-position = Vector2(-384, 1408)
+position = Vector2(-384, 1344)
 
 [node name="Wall13" parent="Walls" instance=ExtResource("10_nxppy")]
-position = Vector2(-320, 1408)
+position = Vector2(-304, 1344)
+
+[node name="Wall41" parent="Walls" instance=ExtResource("10_nxppy")]
+position = Vector2(-768, 1232)
+rotation = -1.57079
+
+[node name="Wall42" parent="Walls" instance=ExtResource("9_q0n2c")]
+position = Vector2(-768, 1152)
+rotation = -1.57079
+
+[node name="Wall43" parent="Walls" instance=ExtResource("10_nxppy")]
+position = Vector2(-768, 1072)
+rotation = -1.57079
 
 [node name="Wall14" parent="Walls" instance=ExtResource("8_qkqsk")]
 position = Vector2(-1024, 1600)
@@ -538,13 +524,21 @@ rotation = -1.5708
 position = Vector2(-1024, 640)
 rotation = -1.5708
 
+[node name="Wall40" parent="Walls" instance=ExtResource("8_qkqsk")]
+position = Vector2(-1024, -384)
+rotation = -1.5708
+
 [node name="Wall16" parent="Walls" instance=ExtResource("8_qkqsk")]
 position = Vector2(-1024, 320)
+rotation = 1.57079
+
+[node name="Wall39" parent="Walls" instance=ExtResource("8_qkqsk")]
+position = Vector2(-1024, -64)
 rotation = -1.5708
 
 [node name="Wall17" parent="Walls" instance=ExtResource("8_qkqsk")]
 position = Vector2(-1024, 1280)
-rotation = -1.5708
+rotation = -4.71238
 
 [node name="Wall18" parent="Walls" instance=ExtResource("8_qkqsk")]
 position = Vector2(-1024, 960)
@@ -576,12 +570,8 @@ rotation = -1.5708
 position = Vector2(1056, 1744)
 rotation = 1.5708
 
-[node name="Wall37" parent="Walls" instance=ExtResource("9_q0n2c")]
-position = Vector2(768, 1056)
-rotation = -1.5708
-
 [node name="Wall38" parent="Walls" instance=ExtResource("9_q0n2c")]
-position = Vector2(768, 1248)
+position = Vector2(512, 1248)
 rotation = 1.5708
 
 [node name="Wall29" parent="Walls" instance=ExtResource("9_q0n2c")]
@@ -591,7 +581,11 @@ rotation = -3.14159
 [node name="Cars" type="Node2D" parent="."]
 
 [node name="Car" parent="Cars" instance=ExtResource("12_2nls5")]
-position = Vector2(-64, -336)
+position = Vector2(-80, -336)
+
+[node name="Car9" parent="Cars" instance=ExtResource("12_2nls5")]
+position = Vector2(-1312, -752)
+rotation = -2.35619
 
 [node name="Car23" parent="Cars" instance=ExtResource("12_2nls5")]
 position = Vector2(-864, -832)
@@ -614,7 +608,7 @@ position = Vector2(176, -96)
 rotation = -1.5708
 
 [node name="Car8" parent="Cars" instance=ExtResource("12_2nls5")]
-position = Vector2(688, -992)
+position = Vector2(640, -992)
 
 [node name="Car2" parent="Cars" instance=ExtResource("12_2nls5")]
 position = Vector2(1328, 272)
@@ -625,52 +619,88 @@ position = Vector2(1440, 272)
 rotation = 3.14159
 
 [node name="Car4" parent="Cars" instance=ExtResource("12_2nls5")]
-position = Vector2(1088, 1232)
-rotation = 3.14159
+position = Vector2(1872, 864)
+rotation = 1.57079
+
+[node name="Car25" parent="Cars" instance=ExtResource("12_2nls5")]
+position = Vector2(720, 1856)
+rotation = -1.57079
+
+[node name="Car27" parent="Cars" instance=ExtResource("12_2nls5")]
+position = Vector2(-320, 1424)
+rotation = -0.523598
+
+[node name="Car17" parent="Cars" instance=ExtResource("12_2nls5")]
+position = Vector2(1968, 1104)
+rotation = 4.71238
 
 [node name="HeavyTruck" parent="Cars" instance=ExtResource("13_vpl2q")]
 position = Vector2(1248, -624)
 rotation = 1.5708
 
 [node name="HeavyTruck11" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(1920, -80)
-rotation = -3.14159
+position = Vector2(1888, -96)
+rotation = -0.261799
 
 [node name="HeavyTruck12" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(1920, -192)
-rotation = -3.14159
+position = Vector2(1888, -208)
+rotation = -0.261799
 
 [node name="HeavyTruck15" parent="Cars" instance=ExtResource("13_vpl2q")]
 position = Vector2(960, 912)
 rotation = -4.71239
 
 [node name="HeavyTruck16" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(848, 928)
+position = Vector2(848, 880)
+rotation = -4.71239
+
+[node name="HeavyTruck23" parent="Cars" instance=ExtResource("13_vpl2q")]
+position = Vector2(-688, 1152)
 rotation = -4.71239
 
 [node name="HeavyTruck13" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(1920, -304)
-rotation = -3.14159
+position = Vector2(1888, -320)
+rotation = -0.261799
 
 [node name="HeavyTruck14" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(1920, -416)
-rotation = -3.14159
+position = Vector2(1888, -432)
+rotation = -0.261799
+
+[node name="HeavyTruck22" parent="Cars" instance=ExtResource("13_vpl2q")]
+position = Vector2(1888, -560)
+rotation = -0.261799
+
+[node name="HeavyTruck17" parent="Cars" instance=ExtResource("13_vpl2q")]
+position = Vector2(1664, -96)
+rotation = -2.87979
+
+[node name="HeavyTruck18" parent="Cars" instance=ExtResource("13_vpl2q")]
+position = Vector2(1664, -208)
+rotation = -2.87979
+
+[node name="HeavyTruck19" parent="Cars" instance=ExtResource("13_vpl2q")]
+position = Vector2(1664, -320)
+rotation = -2.87979
+
+[node name="HeavyTruck20" parent="Cars" instance=ExtResource("13_vpl2q")]
+position = Vector2(1664, -432)
+rotation = -2.87979
+
+[node name="HeavyTruck21" parent="Cars" instance=ExtResource("13_vpl2q")]
+position = Vector2(1664, -560)
+rotation = -2.87979
 
 [node name="HeavyTruck5" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(1632, -912)
+position = Vector2(1616, -864)
 rotation = 1.5708
 
 [node name="HeavyTruck6" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(1744, -912)
+position = Vector2(1728, -864)
 rotation = 1.5708
 
 [node name="HeavyTruck7" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(1856, -912)
+position = Vector2(1840, -864)
 rotation = 1.5708
-
-[node name="HeavyTruck2" parent="Cars" instance=ExtResource("13_vpl2q")]
-position = Vector2(-1200, -80)
-rotation = -1.5708
 
 [node name="HeavyTruck3" parent="Cars" instance=ExtResource("13_vpl2q")]
 position = Vector2(-1456, 432)
@@ -681,7 +711,7 @@ position = Vector2(-1200, 848)
 rotation = -1.56947
 
 [node name="Car3" parent="Cars" instance=ExtResource("14_oyc6y")]
-position = Vector2(-544, 176)
+position = Vector2(-480, 176)
 
 [node name="Car5" parent="Cars" instance=ExtResource("14_oyc6y")]
 position = Vector2(400, -992)
@@ -701,24 +731,35 @@ rotation = -4.71238
 [node name="Car10" parent="Cars" instance=ExtResource("14_oyc6y")]
 position = Vector2(1584, 816)
 
+[node name="Car26" parent="Cars" instance=ExtResource("14_oyc6y")]
+position = Vector2(640, 1856)
+rotation = -1.57079
+
+[node name="Car28" parent="Cars" instance=ExtResource("14_oyc6y")]
+position = Vector2(-320, 1520)
+rotation = -0.523598
+
 [node name="Car11" parent="Cars" instance=ExtResource("14_oyc6y")]
 position = Vector2(176, -192)
 rotation = -1.57033
 
+[node name="Car18" parent="Cars" instance=ExtResource("14_oyc6y")]
+position = Vector2(1808, 432)
+
 [node name="Car13" parent="Cars" instance=ExtResource("14_oyc6y")]
-position = Vector2(-1104, 320)
+position = Vector2(-1104, 560)
 rotation = -1.5708
 
 [node name="Car14" parent="Cars" instance=ExtResource("14_oyc6y")]
-position = Vector2(-1360, -512)
+position = Vector2(-1360, -816)
 rotation = 1.5708
 
 [node name="Car6" parent="Cars" instance=ExtResource("14_oyc6y")]
-position = Vector2(528, -992)
+position = Vector2(512, -992)
 rotation = 3.14159
 
 [node name="Car7" parent="Cars" instance=ExtResource("14_oyc6y")]
-position = Vector2(832, -992)
+position = Vector2(768, -992)
 
 [node name="Buildings" type="Node2D" parent="."]
 
@@ -744,18 +785,15 @@ position = Vector2(192, 1408)
 position = Vector2(896, 128)
 rotation = 1.5708
 
-[node name="Building4" parent="Buildings" instance=ExtResource("2_b5tnh")]
-position = Vector2(-704, 384)
+[node name="Building21" parent="Buildings" instance=ExtResource("2_b5tnh")]
+position = Vector2(-384, 320)
+rotation = -1.57079
 
 [node name="Building2a" parent="Buildings" instance=ExtResource("3_x7aoq")]
 position = Vector2(640, 896)
 
 [node name="Building2a4" parent="Buildings" instance=ExtResource("3_x7aoq")]
 position = Vector2(1408, 64)
-
-[node name="Building2a5" parent="Buildings" instance=ExtResource("3_x7aoq")]
-position = Vector2(-448, 384)
-rotation = -3.14159
 
 [node name="Building2a6" parent="Buildings" instance=ExtResource("3_x7aoq")]
 position = Vector2(-640, 1408)
@@ -782,6 +820,9 @@ position = Vector2(640, 1664)
 
 [node name="Building2b9" parent="Buildings" instance=ExtResource("4_c2qwu")]
 position = Vector2(128, 896)
+
+[node name="Building2b10" parent="Buildings" instance=ExtResource("4_c2qwu")]
+position = Vector2(-640, 384)
 
 [node name="Building2b8" parent="Buildings" instance=ExtResource("4_c2qwu")]
 position = Vector2(-896, 1920)
@@ -851,11 +892,11 @@ rotation = 1.5708
 [node name="Fences" type="Node2D" parent="."]
 
 [node name="Fence3" parent="Fences" instance=ExtResource("20_enprf")]
-position = Vector2(-1200, -960)
+position = Vector2(-1360, -928)
 rotation = 1.57079
 
 [node name="Fence4" parent="Fences" instance=ExtResource("20_enprf")]
-position = Vector2(-1104, -960)
+position = Vector2(-1360, -688)
 rotation = 1.83259
 
 [node name="Fence5" parent="Fences" instance=ExtResource("20_enprf")]
@@ -867,11 +908,11 @@ position = Vector2(432, 1296)
 rotation = 1.309
 
 [node name="Fence7" parent="Fences" instance=ExtResource("20_enprf")]
-position = Vector2(336, 784)
+position = Vector2(336, 832)
 rotation = 1.8326
 
 [node name="Fence9" parent="Fences" instance=ExtResource("20_enprf")]
-position = Vector2(432, 784)
+position = Vector2(432, 832)
 rotation = 1.309
 
 [node name="Fence8" parent="Fences" instance=ExtResource("20_enprf")]
@@ -886,18 +927,19 @@ rotation = 1.5708
 position = Vector2(1328, 848)
 
 [node name="TrashBin" parent="TrashBins" instance=ExtResource("21_nwprt")]
+position = Vector2(144, -48)
 
 [node name="TrashBin2" parent="TrashBins" instance=ExtResource("21_nwprt")]
 position = Vector2(-240, 816)
 
 [node name="TrashBin3" parent="TrashBins" instance=ExtResource("21_nwprt")]
-position = Vector2(-608, 208)
+position = Vector2(-768, 384)
 
 [node name="TrashBin8" parent="TrashBins" instance=ExtResource("21_nwprt")]
-position = Vector2(-1248, 640)
+position = Vector2(-1296, 592)
 
 [node name="TrashBin9" parent="TrashBins" instance=ExtResource("21_nwprt")]
-position = Vector2(-1232, 592)
+position = Vector2(-1792, 544)
 
 [node name="TrashBin10" parent="TrashBins" instance=ExtResource("21_nwprt")]
 position = Vector2(-1296, 640)
@@ -906,7 +948,7 @@ position = Vector2(-1296, 640)
 position = Vector2(432, 1136)
 
 [node name="TrashBin5" parent="TrashBins" instance=ExtResource("21_nwprt")]
-position = Vector2(-1616, -1568)
+position = Vector2(-1648, -1584)
 
 [node name="TrashBin6" parent="TrashBins" instance=ExtResource("21_nwprt")]
 position = Vector2(-320, -816)
@@ -920,152 +962,170 @@ points = PackedVector2Array(-848, 1152, -416, 1200, -384, 1600, -880, 1616, -864
 width = 30.0
 default_color = Color(1, 0, 1, 1)
 
+[node name="Line2D2" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(-1248, 1776, -1360, -576, -1568, -640, -1040, 128, 80, 128, 128, 368, 384, 704, 384, 1056, 560, 1360, 944, 1664, 1424, 1824, 1744, 1584, 1696, 1232, 1968, 864, 1792, 352, 1216, 304, 1104, -608, 848, -608, 848, -848, 416, -848, 336, -656, 208, -640, 112, -464, -336, -448, -400, -848, -736, -960, -224, -864, -384, -720, -393.387, -367.986, 128, -384, 640, -320, 944, 1152, 1312, 1136, 1424, 928, 1360, 1136, 352, 1168, 272, 656, -112, 672, -144, 816, -384, 864, -432, 480, -448, 720, -416, 960, 32, 592, 1120, 608, 1136, -224, 1376, -240, 1504, -512, 1744, -576, 1472, -320, 1200, -128, 1200, 640, -144, 576, -416, 1104, -864, 1184, -1120, 1440, -1184, 1728)
+width = 50.0
+default_color = Color(1, 0.0823529, 0.560784, 1)
+
 [node name="Levels" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[node name="Level1" type="Node2D" parent="Levels"]
+[node name="LevelA" type="Node2D" parent="Levels"]
 
-[node name="Fire" parent="Levels/Level1" instance=ExtResource("22_6ttqk")]
-position = Vector2(-1360, -480)
+[node name="Fire" parent="Levels/LevelA" instance=ExtResource("22_6ttqk")]
+position = Vector2(-1360, -800)
 
-[node name="AreaOfInterest" parent="Levels/Level1" instance=ExtResource("23_toxv5")]
-position = Vector2(-1360, -352)
-rotation = 1.5708
+[node name="AreaOfInterest" parent="Levels/LevelA" instance=ExtResource("23_toxv5")]
+position = Vector2(-1328, -608)
+rotation = 1.309
 
-[node name="Marker2D" type="Marker2D" parent="Levels/Level1"]
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelA"]
 position = Vector2(-1200, 1984)
 rotation = 4.71239
 gizmo_extents = 34.0
 
-[node name="Level2" type="Node2D" parent="Levels"]
+[node name="LevelB" type="Node2D" parent="Levels"]
 
-[node name="Fire" parent="Levels/Level2" instance=ExtResource("22_6ttqk")]
-position = Vector2(1344, 848)
+[node name="Fire" parent="Levels/LevelB" instance=ExtResource("22_6ttqk")]
+position = Vector2(320, 304)
 
-[node name="AreaOfInterest" parent="Levels/Level2" instance=ExtResource("23_toxv5")]
-position = Vector2(1408, 1008)
-rotation = 1.5708
+[node name="Fire2" parent="Levels/LevelB" instance=ExtResource("22_6ttqk")]
+position = Vector2(256, 416)
 
-[node name="Marker2D" type="Marker2D" parent="Levels/Level2"]
-position = Vector2(-384, 1312)
-rotation = 4.71239
+[node name="AreaOfInterest" parent="Levels/LevelB" instance=ExtResource("23_toxv5")]
+position = Vector2(128, 368)
+rotation = -2.09439
+
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelB"]
+position = Vector2(-1600, -608)
+rotation = 6.28319
 gizmo_extents = 34.0
 
-[node name="Level3" type="Node2D" parent="Levels"]
+[node name="LevelC" type="Node2D" parent="Levels"]
 
-[node name="Fire" parent="Levels/Level3" instance=ExtResource("22_6ttqk")]
-position = Vector2(1232, 1968)
+[node name="Fire" parent="Levels/LevelC" instance=ExtResource("22_6ttqk")]
+position = Vector2(1776, 1952)
 
-[node name="AreaOfInterest" parent="Levels/Level3" instance=ExtResource("23_toxv5")]
-position = Vector2(1360, 1904)
+[node name="Fire2" parent="Levels/LevelC" instance=ExtResource("22_6ttqk")]
+position = Vector2(1648, 1968)
 
-[node name="Marker2D" type="Marker2D" parent="Levels/Level3"]
+[node name="Fire3" parent="Levels/LevelC" instance=ExtResource("22_6ttqk")]
+position = Vector2(1664, 1872)
+
+[node name="AreaOfInterest" parent="Levels/LevelC" instance=ExtResource("23_toxv5")]
+position = Vector2(1472, 1840)
+rotation = -1.83259
+
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelC"]
 position = Vector2(352, 144)
 rotation = 3.14159
 gizmo_extents = 34.0
 
-[node name="Level4" type="Node2D" parent="Levels"]
+[node name="LevelD" type="Node2D" parent="Levels"]
 
-[node name="Fire" parent="Levels/Level4" instance=ExtResource("22_6ttqk")]
-position = Vector2(-768, -208)
+[node name="Fire" parent="Levels/LevelD" instance=ExtResource("22_6ttqk")]
+position = Vector2(1136, -784)
 
-[node name="Fire2" parent="Levels/Level4" instance=ExtResource("22_6ttqk")]
-position = Vector2(-720, -64)
+[node name="Fire2" parent="Levels/LevelD" instance=ExtResource("22_6ttqk")]
+position = Vector2(1264, -832)
 
-[node name="AreaOfInterest" parent="Levels/Level4" instance=ExtResource("23_toxv5")]
-position = Vector2(-896, -128)
+[node name="Fire3" parent="Levels/LevelD" instance=ExtResource("22_6ttqk")]
+position = Vector2(1088, -896)
 
-[node name="Marker2D" type="Marker2D" parent="Levels/Level4"]
-position = Vector2(1664, -256)
+[node name="AreaOfInterest" parent="Levels/LevelD" instance=ExtResource("23_toxv5")]
+position = Vector2(1088, -624)
+rotation = 1.83259
+
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelD"]
+position = Vector2(1792, 1600)
 rotation = 3.14159
 gizmo_extents = 34.0
 
-[node name="Level5" type="Node2D" parent="Levels"]
+[node name="LevelE" type="Node2D" parent="Levels"]
 
-[node name="Fire" parent="Levels/Level5" instance=ExtResource("22_6ttqk")]
-position = Vector2(880, 160)
-
-[node name="Fire2" parent="Levels/Level5" instance=ExtResource("22_6ttqk")]
-position = Vector2(784, 48)
-
-[node name="AreaOfInterest" parent="Levels/Level5" instance=ExtResource("23_toxv5")]
-position = Vector2(656, 128)
-
-[node name="Marker2D" type="Marker2D" parent="Levels/Level5"]
-position = Vector2(-1616, -640)
-rotation = 6.28319
-gizmo_extents = 34.0
-
-[node name="Level6" type="Node2D" parent="Levels"]
-
-[node name="Fire" parent="Levels/Level6" instance=ExtResource("22_6ttqk")]
+[node name="Fire" parent="Levels/LevelE" instance=ExtResource("22_6ttqk")]
 position = Vector2(-736, -832)
 
-[node name="Fire2" parent="Levels/Level6" instance=ExtResource("22_6ttqk")]
+[node name="Fire2" parent="Levels/LevelE" instance=ExtResource("22_6ttqk")]
 position = Vector2(-848, -832)
 
-[node name="AreaOfInterest" parent="Levels/Level6" instance=ExtResource("23_toxv5")]
-position = Vector2(-768, -960)
+[node name="AreaOfInterest" parent="Levels/LevelE" instance=ExtResource("23_toxv5")]
+position = Vector2(-784, -960)
 rotation = -1.5708
 
-[node name="Marker2D" type="Marker2D" parent="Levels/Level6"]
-position = Vector2(960, -976)
-rotation = 1.5708
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelE"]
+position = Vector2(848, -592)
+rotation = -1.57079
 gizmo_extents = 34.0
 
-[node name="Level7" type="Node2D" parent="Levels"]
+[node name="LevelF" type="Node2D" parent="Levels"]
 
-[node name="Fire" parent="Levels/Level7" instance=ExtResource("22_6ttqk")]
-position = Vector2(1856, -848)
+[node name="Fire" parent="Levels/LevelF" instance=ExtResource("22_6ttqk")]
+position = Vector2(1472, 800)
 
-[node name="Fire2" parent="Levels/Level7" instance=ExtResource("22_6ttqk")]
-position = Vector2(1632, -896)
+[node name="AreaOfInterest" parent="Levels/LevelF" instance=ExtResource("23_toxv5")]
+position = Vector2(1424, 944)
+rotation = -1.0472
 
-[node name="Fire3" parent="Levels/Level7" instance=ExtResource("22_6ttqk")]
-position = Vector2(1760, -960)
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelF"]
+position = Vector2(-448, -960)
+rotation = 1.57079
+gizmo_extents = 34.0
 
-[node name="AreaOfInterest" parent="Levels/Level7" instance=ExtResource("23_toxv5")]
-position = Vector2(1712, -688)
+[node name="LevelG" type="Node2D" parent="Levels"]
+
+[node name="Fire" parent="Levels/LevelG" instance=ExtResource("22_6ttqk")]
+position = Vector2(-304, 432)
+
+[node name="Fire2" parent="Levels/LevelG" instance=ExtResource("22_6ttqk")]
+position = Vector2(-224, 368)
+
+[node name="AreaOfInterest" parent="Levels/LevelG" instance=ExtResource("23_toxv5")]
+position = Vector2(-400, 448)
+rotation = 1.57079
+
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelG"]
+position = Vector2(1568, 928)
+rotation = -3.14159
+gizmo_extents = 34.0
+
+[node name="LevelH" type="Node2D" parent="Levels"]
+
+[node name="Fire" parent="Levels/LevelH" instance=ExtResource("22_6ttqk")]
+position = Vector2(1824, -880)
+
+[node name="Fire2" parent="Levels/LevelH" instance=ExtResource("22_6ttqk")]
+position = Vector2(1616, -848)
+
+[node name="Fire3" parent="Levels/LevelH" instance=ExtResource("22_6ttqk")]
+position = Vector2(1744, -800)
+
+[node name="AreaOfInterest" parent="Levels/LevelH" instance=ExtResource("23_toxv5")]
+position = Vector2(1744, -672)
 rotation = -1.5708
 
-[node name="Marker2D" type="Marker2D" parent="Levels/Level7"]
-position = Vector2(-384, 1504)
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelH"]
+position = Vector2(-448, 720)
 rotation = -4.71239
 gizmo_extents = 34.0
 
-[node name="Level8" type="Node2D" parent="Levels"]
+[node name="LevelI" type="Node2D" parent="Levels"]
 
-[node name="Fire" parent="Levels/Level8" instance=ExtResource("22_6ttqk")]
+[node name="Fire" parent="Levels/LevelI" instance=ExtResource("22_6ttqk")]
 position = Vector2(-928, 2000)
 
-[node name="Fire2" parent="Levels/Level8" instance=ExtResource("22_6ttqk")]
+[node name="Fire2" parent="Levels/LevelI" instance=ExtResource("22_6ttqk")]
 position = Vector2(-1024, 1952)
 
-[node name="Fire3" parent="Levels/Level8" instance=ExtResource("22_6ttqk")]
+[node name="Fire3" parent="Levels/LevelI" instance=ExtResource("22_6ttqk")]
 position = Vector2(-1008, 1840)
 
-[node name="AreaOfInterest" parent="Levels/Level8" instance=ExtResource("23_toxv5")]
+[node name="AreaOfInterest" parent="Levels/LevelI" instance=ExtResource("23_toxv5")]
 position = Vector2(-1184, 1872)
 rotation = -2.35619
 
-[node name="Marker2D" type="Marker2D" parent="Levels/Level8"]
-position = Vector2(1536, -640)
-rotation = -4.71239
-gizmo_extents = 34.0
-
-[node name="Level9" type="Node2D" parent="Levels"]
-
-[node name="Fire" parent="Levels/Level9" instance=ExtResource("22_6ttqk")]
-position = Vector2(-480, 544)
-
-[node name="Fire2" parent="Levels/Level9" instance=ExtResource("22_6ttqk")]
-position = Vector2(-368, 528)
-
-[node name="AreaOfInterest" parent="Levels/Level9" instance=ExtResource("23_toxv5")]
-position = Vector2(-448, 672)
-rotation = -3.19261
-
-[node name="Marker2D" type="Marker2D" parent="Levels/Level9"]
-position = Vector2(1920, 1456)
+[node name="Marker2D" type="Marker2D" parent="Levels/LevelI"]
+position = Vector2(1488, -592)
 rotation = -4.71239
 gizmo_extents = 34.0

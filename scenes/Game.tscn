@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdk5q3up1irk0"]
+[gd_scene load_steps=9 format=3 uid="uid://bdk5q3up1irk0"]
 
 [ext_resource type="PackedScene" uid="uid://7vc1up7aeg00" path="res://scenes/Truck.tscn" id="1_wpp4s"]
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_yuy1b"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bdlndkgggxiop" path="res://scenes/ui/HUD.tscn" id="4_v8gbc"]
 [ext_resource type="PackedScene" uid="uid://bc6frce6kkj84" path="res://scenes/ui/score_screen.tscn" id="5_o8tlb"]
 [ext_resource type="PackedScene" uid="uid://cbbtrs0rc4llk" path="res://scenes/ui/MainMenu.tscn" id="6_g80gx"]
+[ext_resource type="AudioStream" uid="uid://26moum8m2v5c" path="res://assets/sounds/completetask_0.mp3" id="7_s1vsf"]
+[ext_resource type="AudioStream" uid="uid://hhxr03s2xhc4" path="res://assets/sounds/stomp_01.ogg" id="8_vbt62"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yuy1b")
@@ -18,20 +20,42 @@ unique_name_in_owner = true
 
 [node name="Truck" parent="Root" instance=ExtResource("1_wpp4s")]
 unique_name_in_owner = true
+position = Vector2(352, 141)
+rotation = 3.14159
 
 [node name="Camera2D" type="Camera2D" parent="Root/Truck"]
 unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
+zoom = Vector2(0.8, 0.8)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="puddles" type="Node2D" parent="Root"]
+unique_name_in_owner = true
 
-[node name="Hud" parent="CanvasLayer" instance=ExtResource("4_v8gbc")]
+[node name="ControlCanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Hud" parent="ControlCanvasLayer" instance=ExtResource("4_v8gbc")]
 unique_name_in_owner = true
 visible = false
+modulate = Color(1, 0.972549, 0.921569, 1)
 
-[node name="ScoreScreen" parent="CanvasLayer" instance=ExtResource("5_o8tlb")]
+[node name="ScoreScreen" parent="ControlCanvasLayer" instance=ExtResource("5_o8tlb")]
 unique_name_in_owner = true
 visible = false
+modulate = Color(1, 0.972549, 0.921569, 1)
 
-[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("6_g80gx")]
+[node name="MainMenu" parent="ControlCanvasLayer" instance=ExtResource("6_g80gx")]
 unique_name_in_owner = true
+modulate = Color(1, 0.972549, 0.921569, 1)
+
+[node name="LevelFinishedAudio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_s1vsf")
+volume_db = 6.0
+bus = &"UI"
+
+[node name="LevelFailedAudio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_vbt62")
+volume_db = 7.0
+bus = &"UI"

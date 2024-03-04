@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://7vc1up7aeg00"]
+[gd_scene load_steps=21 format=3 uid="uid://7vc1up7aeg00"]
 
 [ext_resource type="Script" path="res://scripts/Truck.gd" id="1_syro1"]
 [ext_resource type="Texture2D" uid="uid://01hda4khbdak" path="res://resources/textures/flat/smoke1.atlastex" id="2_squyc"]
@@ -11,7 +11,9 @@
 [ext_resource type="AudioStream" uid="uid://d4flf5fxw335v" path="res://assets/sounds/turn.ogg" id="9_ow0cy"]
 [ext_resource type="AudioStream" uid="uid://cmjhs51b7gdug" path="res://assets/sounds/puff.ogg" id="10_nq1v4"]
 [ext_resource type="AudioStream" uid="uid://cqiv3ml5voxto" path="res://assets/sounds/water2.ogg" id="11_gb2eu"]
+[ext_resource type="AudioStream" uid="uid://b3xompmtb1r7h" path="res://assets/sounds/splash1.ogg" id="12_653kl"]
 [ext_resource type="AudioStream" uid="uid://conux58ikljik" path="res://assets/sounds/splash2.ogg" id="13_e27xj"]
+[ext_resource type="AudioStream" uid="uid://bg4q1ypwoxbwl" path="res://assets/sounds/splash3.ogg" id="14_vv6jc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8100f"]
 radius = 34.0
@@ -175,7 +177,7 @@ texture = ExtResource("3_6nfis")
 
 [node name="Arrow" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-modulate = Color(0.443137, 0.74902, 0.196078, 0.905882)
+modulate = Color(0.443137, 0.74902, 0.196078, 0.576471)
 z_index = 20
 z_as_relative = false
 texture = ExtResource("7_08bwq")
@@ -183,7 +185,7 @@ offset = Vector2(86, 0)
 
 [node name="CollisionTimer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 0.7
+wait_time = 0.5
 one_shot = true
 
 [node name="TurnAudio" type="AudioStreamPlayer2D" parent="."]
@@ -207,7 +209,6 @@ streams = Array[AudioStream]([ExtResource("11_gb2eu")])
 
 [node name="DropWaterAudio" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
-volume_db = 2.584
 bus = &"SoundFx"
 script = ExtResource("8_6a0ie")
-streams = Array[AudioStream]([ExtResource("13_e27xj")])
+streams = Array[AudioStream]([ExtResource("12_653kl"), ExtResource("13_e27xj"), ExtResource("14_vv6jc")])

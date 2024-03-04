@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://6wal7pxtgoqa"]
+[gd_scene load_steps=2 format=3 uid="uid://6wal7pxtgoqa"]
 
 [ext_resource type="Script" path="res://scripts/Puddle.gd" id="1_dtysf"]
-[ext_resource type="Texture2D" uid="uid://dgbqtn66oxur0" path="res://resources/textures/flat/puddle1.atlastex" id="1_qvhqu"]
 
 [node name="Puddle" type="Sprite2D"]
-texture = ExtResource("1_qvhqu")
 script = ExtResource("1_dtysf")

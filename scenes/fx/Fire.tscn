@@ -1,8 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwm27ravitm4h"]
+[gd_scene load_steps=13 format=3 uid="uid://dwm27ravitm4h"]
 
 [ext_resource type="Texture2D" uid="uid://b5ntss8q3koxw" path="res://resources/textures/flat/smoke3.atlastex" id="1_7d26h"]
 [ext_resource type="Script" path="res://scripts/fx/Fire.gd" id="1_hf7y1"]
 [ext_resource type="Texture2D" uid="uid://dxwlh6dgh5psj" path="res://resources/textures/flat/smoke2.atlastex" id="2_txfs0"]
+[ext_resource type="Script" path="res://scripts/fx/RandomAudioPlayer.gd" id="4_gj7fj"]
+[ext_resource type="AudioStream" uid="uid://ddoshvvb8phxr" path="res://assets/sounds/dirt1.ogg" id="5_n6fw2"]
+[ext_resource type="AudioStream" uid="uid://dp3srtqffmtqu" path="res://assets/sounds/dirt2.ogg" id="6_m8gon"]
+[ext_resource type="AudioStream" uid="uid://bjimp61tbmhj5" path="res://assets/sounds/fire_extinguish.ogg" id="7_3w2nd"]
 
 [sub_resource type="Curve" id="Curve_k4y7v"]
 _data = [Vector2(0, 0.509777), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.04083, 0.0, 0, 0]
@@ -57,3 +61,15 @@ scale_amount_max = 1.5
 scale_amount_curve = SubResource("Curve_ckdrs")
 color_ramp = SubResource("Gradient_42gft")
 color_initial_ramp = SubResource("Gradient_exbs6")
+
+[node name="BurningAudio" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+bus = &"SoundFx"
+script = ExtResource("4_gj7fj")
+streams = Array[AudioStream]([ExtResource("5_n6fw2"), ExtResource("6_m8gon")])
+
+[node name="ExtinguishAudio" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+bus = &"SoundFx"
+script = ExtResource("4_gj7fj")
+streams = Array[AudioStream]([ExtResource("7_3w2nd")])

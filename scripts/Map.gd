@@ -37,6 +37,7 @@ func _ready() -> void:
 		level.start_position = (node.find_child("Marker2D") as Node2D).global_transform
 		level.target_area = node.find_child("AreaOfInterest")
 		levels.append(level)
+		level.hide()
 
 func select_level(index: int) -> Level:
 	for i in range(levels.size()):

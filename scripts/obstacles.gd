@@ -11,9 +11,10 @@ func _ready() -> void:
 	var s := 0.0 if _high else 0.1
 	_body.modulate = Color.from_hsv(rng.randf(), s, v)
 	_body.z_index = 10 if _high else 5
-	_shadow.modulate.a = 0.25
+	_shadow.modulate.a = 0.4
 	_shadow.z_index = 1
 	_shadow.z_as_relative = false
+	_shadow.offset = Vector2.ZERO
 	
 	var random_rotate := 0
 	for c in get_children():
@@ -37,5 +38,4 @@ func _ready() -> void:
 		2:
 			rotation_degrees = 90 * rng.randi_range(0, 3)
 
-func _process(_delta: float) -> void:
-	_shadow.global_position = _body.global_position + Vector2(3, 2)
+	_shadow.global_position = _body.global_position + Vector2(3.5, 2.5)

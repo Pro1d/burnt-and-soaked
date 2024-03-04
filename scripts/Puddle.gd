@@ -29,6 +29,8 @@ static func make_puddle(size: int) -> Puddle:
 			p.texture = _textures[randi_range(5, 7)]
 		3:
 			p.texture = _textures[randi_range(3, 4)]
-		_, 4:
+		4:
 			p.texture = _textures[randi_range(1, 2)]
+		_:
+			printerr("Bad puddle size ", size)
 	return p

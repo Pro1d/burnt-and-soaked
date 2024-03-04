@@ -12,7 +12,7 @@
 
 [sub_resource type="InputEventKey" id="InputEventKey_cnpcn"]
 device = -1
-physical_keycode = 4194305
+keycode = 4194305
 
 [sub_resource type="Shortcut" id="Shortcut_w45l6"]
 events = [SubResource("InputEventKey_cnpcn")]
@@ -43,22 +43,25 @@ grow_vertical = 2
 theme = ExtResource("1_ihu78")
 script = ExtResource("2_tbg6n")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 9
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 92.0
+grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
-
-[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
 alignment = 1
 
-[node name="MenuButton" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="MenuButton" type="Button" parent="HBoxContainer/MarginContainer3/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -67,9 +70,8 @@ focus_mode = 0
 shortcut = SubResource("Shortcut_w45l6")
 icon = ExtResource("3_wj6gn")
 
-[node name="MusicButton" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="MusicButton" type="Button" parent="HBoxContainer/MarginContainer3/HBoxContainer2"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 tooltip_text = "Toggle music"
@@ -77,7 +79,7 @@ focus_mode = 0
 shortcut = SubResource("Shortcut_p1wex")
 icon = ExtResource("4_v3ol1")
 
-[node name="RetryButton" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="RetryButton" type="Button" parent="HBoxContainer/MarginContainer3/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -86,15 +88,33 @@ focus_mode = 0
 shortcut = SubResource("Shortcut_uv3rv")
 icon = ExtResource("5_nst6h")
 
-[node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="HBoxContainer/MarginContainer3/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimeDisplay" parent="HBoxContainer/MarginContainer3/HBoxContainer2" instance=ExtResource("8_nnvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="HBoxContainer/MarginContainer3/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LevelLabel" type="Label" parent="HBoxContainer/MarginContainer3/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 1/9"
+label_settings = ExtResource("9_3h4mm")
+
+[node name="Control" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 16
+theme_override_constants/margin_left = 24
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/MarginContainer"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 value = 100.0
@@ -102,26 +122,9 @@ fill_mode = 3
 texture_under = ExtResource("6_vck1s")
 texture_progress = ExtResource("7_ykfju")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer"]
+[node name="Control2" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2"]
-layout_mode = 2
-
-[node name="TimeDisplay" parent="MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer" instance=ExtResource("8_nnvyx")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="LevelLabel" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Level 1/9"
-label_settings = ExtResource("9_3h4mm")

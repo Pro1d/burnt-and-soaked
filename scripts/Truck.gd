@@ -2,7 +2,6 @@ class_name Truck
 extends CharacterBody2D
 
 signal collided(strong: bool)
-signal catapulted()
 
 enum State {LOADING, DRIVING, CATAPULTING, EMERGENCY_STOP}
 
@@ -20,6 +19,9 @@ const JUMP_DURATION := 0.5
 @onready var _catapult_sprite := %Catapult as Sprite2D
 @onready var _default_z_index := _body_sprite.z_index
 @onready var _low_area := %LowScanArea2D as Area2D
+@onready var _turn_audio := %TurnAudio as RandomSoundPlayer
+@onready var _collision_audio := %CollisionAudio as RandomSoundPlayer
+
 const _jump_z_index := 6
 var dir := Vector2.RIGHT
 var z := 0.0
@@ -50,9 +52,10 @@ func _update_water_supply_visual() -> void:
 	(%WaterSupply1 as Node2D).visible = _water_supply > 0 and _state != State.CATAPULTING
 	(%WaterSupply2 as Node2D).visible = _water_supply > 50 and _state != State.CATAPULTING
 
-func shake() -> void:
+func shake(strong: bool) -> void:
 	if has_water_supply():
 		_water_burst_particles.emitting = true
+		(%DropWaterAudio as RandomSoundPlayer).play_random(6.0, randf() * -2 + (0 if strong else -4))
 
 func start_loading(pose: Transform2D, target_node: Node2D) -> void:
 	_state = State.LOADING
@@ -80,10 +83,13 @@ func catapult_water(target_pos: Vector2) -> void:
 	_state = State.CATAPULTING
 	_update_water_supply_visual()
 	_catapult_sprite.global_rotation = _catapult_sprite.global_position.angle_to_point(target_pos) - PI / 2
-
-	printerr("TODO implement catapulting FX")
-	await get_tree().create_timer(1.0).timeout
-	catapulted.emit()
+	var tween := create_tween()
+	tween.tween_property(_catapult_sprite, "scale:y", 1.0, 1.15).from(2.0) \
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+	tween.play()
+	(%SprinklerParticles2 as CPUParticles2D).emitting = true
+	(%SprinklerParticles as CPUParticles2D).emitting = true
+	(%WaterCatapultAudio as RandomSoundPlayer).play_random(3.0)
 
 func _process(_delta: float) -> void:
 	var shadow := %ShadowSprite as Sprite2D
@@ -104,13 +110,16 @@ func _unhandled_input(event: InputEvent) -> void:
 	if _state != State.DRIVING:
 		return
 	
-	if event.is_action_pressed("ui_right"):
+	if event.is_action_pressed("right"):
 		dir = Vector2(-dir.y, dir.x)
-	elif event.is_action_pressed("ui_left"):
+		_turn_audio.play_random(12.0)
+	elif event.is_action_pressed("left"):
 		dir = Vector2(dir.y, -dir.x)
-	elif event.is_action_pressed("ui_accept"):
+		_turn_audio.play_random(12.0)
+	elif event.is_action_pressed("jump"):
 		if not _jumping():
 			_start_jump()
+			_turn_audio.play_random(12.0)
 
 func _start_jump() -> void:
 	z = 0.01
@@ -127,7 +136,7 @@ func _end_jump() -> bool:
 	collision_mask = 0b101
 	collision_layer = 0b101
 	_body_sprite.z_index = _default_z_index
-	shake()
+	shake(false)
 	return true
 
 func _jumping() -> bool:
@@ -197,11 +206,12 @@ func _physics_process(delta: float) -> void:
 		max_col -= 1
 		if kin_col == null or max_col == 0:
 			break
-		var N := kin_col.get_normal()
-		velocity = velocity.reflect(N) - velocity.dot(N) * N * 0.7
-		motion = motion.reflect(N) - motion.dot(N) * N * 0.7
+		var N := (global_position - kin_col.get_position()).normalized()
+		velocity = velocity - velocity.dot(N) * N
+		motion = motion - motion.dot(N) * N
 	
 	var delta_velocity := (velocity - init_velocity).length()
 	var collision_strength := int(remap(delta_velocity, expected_accel.length(), MAX_SPEED, 0, 2.99))
 	if collision_strength > 0:
 		collided.emit(collision_strength >= 2)
+		_collision_audio.play_random(6.0)

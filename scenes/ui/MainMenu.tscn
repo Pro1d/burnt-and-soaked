@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbbtrs0rc4llk"]
+[gd_scene load_steps=6 format=3 uid="uid://cbbtrs0rc4llk"]
 
 [ext_resource type="Theme" uid="uid://e2qgxo4dwns7" path="res://resources/themes/hud.theme" id="1_u672f"]
 [ext_resource type="Script" path="res://scripts/ui/MainMenu.gd" id="2_1n3v7"]
+[ext_resource type="Texture2D" uid="uid://ite6d2itap46" path="res://resources/textures/ui/play.atlastex" id="3_ldywy"]
+[ext_resource type="Texture2D" uid="uid://b0o3f3ngseds0" path="res://resources/textures/ui/music.atlastex" id="3_p35tl"]
+[ext_resource type="Texture2D" uid="uid://db3qptglp801y" path="res://resources/textures/ui/rank.atlastex" id="4_po48d"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -42,31 +45,63 @@ theme_override_constants/margin_bottom = 16
 layout_mode = 2
 alignment = 1
 
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Burnt & Soaked"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0.596078)
+layout_mode = 2
+text = "1. Turn: Q/D"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0.596078)
+layout_mode = 2
+text = "2. Jump: Z or Space"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.596078)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "1. Turn: Q+D
+2. Jump: Space
+3. Drive safe?!
+4. Splash the fire"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
-
-[node name="StartButton" type="Button" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(170, 0)
-layout_mode = 2
-text = "Start"
 
 [node name="RankingButton" type="Button" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
-text = "Ranking"
+tooltip_text = "Ranking"
+icon = ExtResource("4_po48d")
+icon_alignment = 1
 
-[node name="Label" type="Label" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="StartButton" type="Button" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
-text = "Turn: Q/D"
-horizontal_alignment = 1
+tooltip_text = "Play"
+icon = ExtResource("3_ldywy")
+icon_alignment = 1
 
-[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Jump: Space"
-horizontal_alignment = 1
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="MusicButton" type="Button" parent="MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+focus_mode = 0
+icon = ExtResource("3_p35tl")

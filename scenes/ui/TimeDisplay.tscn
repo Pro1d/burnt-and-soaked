@@ -18,9 +18,11 @@ text = "0"
 label_settings = ExtResource("2_5k5a1")
 
 [node name="Sep1Label" type="Label" parent="."]
+custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
 text = ":"
 label_settings = ExtResource("2_5k5a1")
+horizontal_alignment = 1
 
 [node name="Second1Label" type="Label" parent="."]
 layout_mode = 2

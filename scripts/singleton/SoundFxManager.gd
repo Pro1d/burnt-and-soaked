@@ -5,7 +5,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ui_sound.bus = &"UI"
-	#ui_sound.stream = preload("res://assets/sounds/tuck.ogg")
+	ui_sound.stream = preload("res://assets/sounds/tuck.ogg")
 	add_child(ui_sound)
 
 func keep_until_finished(audio: Node) -> void: # AudioStreamPlayer[2D]
