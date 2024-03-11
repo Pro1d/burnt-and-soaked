@@ -68,7 +68,7 @@ horizontal_alignment = 1
 modulate = Color(1, 1, 1, 0.596078)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "1. Turn: Q+D
+text = "1. Turn: A+D
 2. Jump: Space
 3. Drive safe?!
 4. Splash the fire"

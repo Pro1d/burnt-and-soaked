@@ -39,4 +39,4 @@ static func time_to_string(time: float) -> String:
 	var minutes := int(time / 60)
 	var sec := int(time) % 60
 	var centi := roundi(time * 100) % 100
-	return str(minutes) + ":" + str(sec) + "." + str(centi)
+	return "%d:%02d.%02d" % [minutes, sec, centi]

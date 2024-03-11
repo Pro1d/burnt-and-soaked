@@ -61,6 +61,8 @@ func start_loading(pose: Transform2D, target_node: Node2D) -> void:
 	_state = State.LOADING
 	global_transform = pose
 	dir = pose.x
+	_end_jump(true)
+	velocity = Vector2.ZERO
 	_target_node = target_node
 	_update_water_supply_visual()
 
@@ -128,15 +130,16 @@ func _start_jump() -> void:
 	collision_layer = 0x110
 	_body_sprite.z_index = _jump_z_index
 
-func _end_jump() -> bool:
-	if _low_area.get_overlapping_bodies().size() > 0:
+func _end_jump(force: bool = false) -> bool:
+	if _low_area.get_overlapping_bodies().size() > 0 and not force:
 		return false
 	z = 0.0
 	vz = 0.0
 	collision_mask = 0b101
 	collision_layer = 0b101
 	_body_sprite.z_index = _default_z_index
-	shake(false)
+	if not force:
+		shake(false)
 	return true
 
 func _jumping() -> bool:
